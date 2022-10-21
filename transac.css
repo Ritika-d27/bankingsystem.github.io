@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/trf.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+:root {
+    --darkblue: #002244;
+    --lightblue: #0CAFFF;
+    --white: #f9f6f9;
+    --green: #0ce513;
+    --red: #ff2400;
+}
+
+/* ----------------------- LOGO ----------------------- */
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px var(--lightblue);
+    border-radius: 50%;
+    background: white;
+}
+
+.logo img {
+    width: 100%;
+    border: 2px solid var(--darkblue);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ----------------------- TRANSACTION FORM ----------------------- */
+#transact {
+    padding: 18px 10%;
+}
+
+.container {
+    width: 85%;
+    margin: 20px auto;
+}
+
+.container .heading {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 50px;
+    text-shadow: 0 0 10px var(--white);
+    color: var(--darkblue);
+}
+
+/* ----------------------- USER DETAILS ----------------------- */
+.details {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.details .user-details {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.user-details,
+.user-details tr,
+.user-details td,
+.user-details th {
+    border: 2px solid var(--white);
+}
+
+.user-details th {
+    font-size: 20px;
+    padding: 8px 0;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.user-details td {
+    font-size: 18px;
+    padding: 10px 0;
+    color: var(--white);
+    font-weight: 400;
+}
+
+/* ----------------------- ACTUAL FORM ----------------------- */
+.form {
+    width: 60%;
+    margin: 38px auto;
+}
+
+.form .form-table {
+    width: 100%;
+    border: none;
+}
+
+.form-table td {
+    padding: 20px 0;
+}
+
+.form-table .label {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fefefe;
+    letter-spacing: 1.2px;
+}
+
+.form-table .input {
+    width: 400px;
+    height: auto;
+}
+
+.input select {
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--darkblue);
+    color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--white);
+    font-size: 16px;
+}
+
+.input select option {
+    background: var(--white);
+    color: var(--darkblue);
+}
+
+.input input {
+    width: 50%;
+    margin: 0 10px;
+    padding: 6px 10px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--white);
+    background: transparent;
+    outline: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input .zeros {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input input:focus {
+    border-bottom-color: var(--lightblue);
+}
+
+.input input:valid {
+    border-bottom-color: var(--green);
+}
+
+.input i {
+    font-size: 16px;
+    color: var(--white);
+}
+
+.form-table .button {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.button .submit-btn {
+    background: var(--lightblue);
+    padding: 8px 16px;
+    font-size: 17px;
+    border: 0;
+    outline: 0;
+    color: var(--darkblue);
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+
+.submit-btn i {
+    margin: 0 6px 0 0;
+}
+
+.submit-btn:hover {
+    opacity: 1;
+    background: var(--green);
+    font-weight: bold;
+}
+
+@media only screen and (max-width:800px) {
+    .logo {
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+    }
+
+    #transact {
+        padding: 40px 20px 0;
+    }
+
+    .container,
+    .details,
+    .form {
+        width: 100%;
+    }
+
+    .user-details th {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .user-details td {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .form-table .label {
+        font-size: 22px;
+    }
+
+    .form-table .input {
+        width: 200px;
+    }
+
+    .input select {
+        padding: 6px 20px;
+    }
+
+    .input input {
+        width: 70%;
+    }
+}
